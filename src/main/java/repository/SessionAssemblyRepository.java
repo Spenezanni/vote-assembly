@@ -2,7 +2,6 @@ package repository;
 
 import java.util.List;
 import java.util.Optional;
-
 import domain.model.SessionAssembly;
 import domain.model.TopicAssembly;
 import org.springframework.data.repository.CrudRepository;

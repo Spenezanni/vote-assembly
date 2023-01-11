@@ -1,6 +1,5 @@
 package mapper;
 
-
 import domain.dto.TopicAssemblyDto;
 import domain.model.TopicAssembly;
 import domain.request.TopicAssemblyRequest;
@@ -8,7 +7,6 @@ import domain.response.TopicAssemblyResponse;
 import exception.Messages;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-
 import java.util.Objects;
 
 @Component

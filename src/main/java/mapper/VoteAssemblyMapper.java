@@ -7,7 +7,6 @@ import domain.request.VoteAssemblyRequest;
 import domain.response.VoteAssemblyResponse;
 import exception.Messages;
 import org.springframework.stereotype.Component;
-
 import java.util.Objects;
 
 @Component

@@ -1,7 +1,6 @@
 package service;
 
 import java.util.Optional;
-
 import domain.dto.VoteAssemblyDto;
 import domain.model.TopicAssembly;
 import domain.model.VoteAssembly;

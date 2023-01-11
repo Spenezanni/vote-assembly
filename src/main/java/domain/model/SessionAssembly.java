@@ -1,7 +1,6 @@
 package domain.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 @Data
