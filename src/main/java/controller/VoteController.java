@@ -13,8 +13,10 @@ import service.VoteAssemblyService;
 @RestController
 @RequestMapping(value = "/topics-assembly", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class VoteController {
+
     @Autowired
     private VoteAssemblyService voteAssemblyService;
+
     @Autowired
     private VoteAssemblyMapper voteAssemblyMapper;
 

@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 @Configuration
 public class KafkaAdminConfig {
+
     public KafkaProperties properties;
     public KafkaAdminConfig(KafkaProperties properties) {
         this.properties = properties;

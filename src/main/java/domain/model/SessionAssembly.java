@@ -12,9 +12,11 @@ public class SessionAssembly {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long sessionId;
+
         @OneToOne()
         @JoinColumn(name = "topic_assembly_id")
         private TopicAssembly topicAssembly;
+
         private LocalDateTime startVote;
         private LocalDateTime finalVote;
         private Boolean produceMessage;

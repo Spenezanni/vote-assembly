@@ -12,15 +12,19 @@ import java.util.Objects;
 
 @Component
 public class VoteAssemblyMapper {
+
     public VoteAssembly dtoToVoteAssembly(TopicAssembly topicAssembly, VoteAssemblyDto voteAssemblyDto) {
         return new VoteAssembly(topicAssembly, voteAssemblyDto.getDocument(), voteAssemblyDto.getVoteAssembly());
     }
+
     public VoteAssemblyDto entityToVoteAssemblyDto(VoteAssembly voteAssembly) {
         return new VoteAssemblyDto(Objects.nonNull(voteAssembly));
     }
+
     public VoteAssemblyDto entityToVoteAssemblyDto(TopicAssembly topicAssembly, Long countVoteYes, Long countVoteNo) {
         return new VoteAssemblyDto(topicAssembly.getDescription(), countVoteYes, countVoteNo);
     }
+
     public VoteAssemblyDto requestToVoteAssemblyDto(Long topicAssemblyId, VoteAssemblyRequest voteAssemblyRequest) {
         VoteAssemblyDto voteAssemblyDto = new VoteAssemblyDto();
         voteAssemblyDto.setTopicAssemblyId(topicAssemblyId);
@@ -28,6 +32,7 @@ public class VoteAssemblyMapper {
         voteAssemblyDto.setVoteAssembly(voteAssemblyRequest.getVoteAssembly());
         return voteAssemblyDto;
     }
+
     public VoteAssemblyResponse dtoToVoteAssemblyResponse(VoteAssemblyDto voteAssemblyDto) {
         if (Objects.isNull(voteAssemblyDto)) {
             return new VoteAssemblyResponse(Messages.YOU_CAN_NOT_VOTE);

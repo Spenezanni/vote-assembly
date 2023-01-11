@@ -3,6 +3,7 @@ package domain.dto;
 import lombok.Data;
 @Data
 public class TopicAssemblyDto {
+
     private Long topicAssemblyId;
     private String description;
     public TopicAssemblyDto() {

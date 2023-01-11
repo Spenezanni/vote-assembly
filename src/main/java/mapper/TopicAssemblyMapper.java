@@ -13,11 +13,13 @@ import java.util.Objects;
 
 @Component
 public class TopicAssemblyMapper {
+
     public TopicAssembly dtoToTopicAssembly(TopicAssemblyDto topicAssemblyDto) {
         TopicAssembly topicAssembly = new TopicAssembly();
         topicAssembly.setDescription(topicAssemblyDto.getDescription());
         return topicAssembly;
     }
+
     public TopicAssemblyDto entityToTopicAssemblyDto(TopicAssembly topicAssemblyEntity) {
 
         if (Objects.isNull(topicAssemblyEntity)) {

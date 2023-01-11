@@ -4,9 +4,11 @@ import lombok.Data;
 
 @Data
 public class VoteAssemblyResponse {
+
     private TopicAssemblyResponse topicVote;
     private VoteAssemblyResultResponse result;
     private String message;
+
     public VoteAssemblyResponse() {
     }
 

@@ -13,8 +13,10 @@ import service.SessionAssemblyService;
 @RestController
 @RequestMapping(value = "/topics-assembly", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class SessionController {
+
         @Autowired
         private SessionAssemblyService sessionService;
+
         @Autowired
         private SessionAssemblyMapper sessionAssemblyMapper;
 

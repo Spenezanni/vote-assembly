@@ -16,12 +16,16 @@ import java.util.stream.Collectors;
 
 @Service
 public class SessionAssemblyService {
+
 	@Autowired
 	private SessionAssemblyRepository sessionRepository;
+
 	@Autowired
 	private TopicAssemblyService topicVoteService;
+
 	@Autowired
 	private SessionAssemblyMapper sessionAssemblyMapper;
+
 	public SessionAssemblyDto openSession(SessionAssemblyDto sessionDto) {
 		Optional<TopicAssembly> topicAssembly = topicVoteService.findById(sessionDto.getTopicAssemblyId());
 		if (topicAssembly.isPresent()) {
@@ -31,6 +35,7 @@ public class SessionAssemblyService {
 		}
 		throw new IllegalArgumentException(Messages.THE_TOPIC_ASSEMBLY_NOT_EXISTS);
 	}
+
 	public Boolean isSessionOpenOfTopicVote(TopicAssembly topicAssembly) {
 		Optional<SessionAssembly> optionalSession = sessionRepository.findByTopicVote(topicAssembly);
 		if (optionalSession.isPresent()) {
@@ -46,6 +51,7 @@ public class SessionAssemblyService {
 			.map(this::saveAndReturnTopicVoteDescription)
 			.collect(Collectors.toList());
 	}
+
 	private String saveAndReturnTopicVoteDescription(SessionAssembly session) {
 		session.setProduceMessage(Boolean.TRUE);
 		SessionAssembly sessionSaved = sessionRepository.save(session);

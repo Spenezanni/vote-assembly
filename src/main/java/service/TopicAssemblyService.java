@@ -10,8 +10,10 @@ import repository.TopicAssemblyRepository;
 
 @Service
 public class TopicAssemblyService {
+
 	@Autowired
 	private TopicAssemblyRepository topicAssemblyRepository;
+
 	@Autowired
 	private TopicAssemblyMapper topicAssemblyMapper;
 
@@ -20,6 +22,7 @@ public class TopicAssemblyService {
 		TopicAssembly topicVoteInserted = topicAssemblyRepository.save(topicAssemblyToInsert);
 		return topicAssemblyMapper.entityToTopicAssemblyDto(topicVoteInserted);
 	}
+
 	public Optional<TopicAssembly> findById(Long topicAssemblyId) {
 		return topicAssemblyRepository.findById(topicAssemblyId);
 	}

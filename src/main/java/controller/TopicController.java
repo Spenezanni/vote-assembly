@@ -16,8 +16,10 @@ import service.TopicAssemblyService;
 @RestController
 @RequestMapping(value = "/topics-assembly", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class TopicController {
+
     @Autowired
     private TopicAssemblyService topicAssemblyService;
+
     @Autowired
     private TopicAssemblyMapper topicAssemblyMapper;
 

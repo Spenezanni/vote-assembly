@@ -9,9 +9,11 @@ public class VoteAssembly {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long voteId;
+
     @OneToOne()
     @JoinColumn(name = "topic_assembly_id")
     private TopicAssembly topicAssembly;
+
     private String document;
     private Boolean vote;
 

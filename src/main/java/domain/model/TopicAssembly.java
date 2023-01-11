@@ -13,6 +13,7 @@ public class TopicAssembly {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "topic_assembly_id")
     private Long topicAssemblyId;
+
     @Column(name = "description")
     private String description;
 

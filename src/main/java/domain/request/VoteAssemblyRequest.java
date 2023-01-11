@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class VoteAssemblyRequest {
+
     private String document;
     private Boolean voteAssembly;
 

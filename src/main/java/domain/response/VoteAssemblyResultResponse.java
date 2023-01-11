@@ -1,6 +1,7 @@
 package domain.response;
 
 public class VoteAssemblyResultResponse {
+
     private Long countVoteYes;
     private Long countVoteNo;
 

@@ -17,10 +17,13 @@ public class VoteAssemblyService {
 
 	@Autowired
 	private TopicAssemblyService topicAssemblyService;
+
 	@Autowired
 	private SessionAssemblyService sessionAssemblyService;
+
 	@Autowired
 	private VoteAssemblyRepository voteAssemblyRepository;
+
 	@Autowired
 	private VoteAssemblyMapper voteAssemblyMapper;
 	
@@ -35,6 +38,7 @@ public class VoteAssemblyService {
 		}
 		throw new IllegalArgumentException(Messages.THE_TOPIC_ASSEMBLY_NOT_EXISTS);
 	}
+
 	private VoteAssemblyDto executeVote(VoteAssemblyDto voteAssemblyDto, Optional<TopicAssembly> optionalTopicVote) {
 		VoteAssembly voteAssembly = voteAssemblyMapper.dtoToVoteAssembly(optionalTopicVote.get(), voteAssemblyDto);
 		VoteAssembly voteSaved = voteAssemblyRepository.save(voteAssembly);

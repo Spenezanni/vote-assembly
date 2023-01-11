@@ -14,11 +14,13 @@ public class VoteAssemblyDto {
 
     public VoteAssemblyDto() {
     }
+
     public VoteAssemblyDto(String description, Long countVoteYes, Long countVoteNo) {
         this.topicAssemblyDescription = description;
         this.countVoteYes = countVoteYes;
         this.countVoteNo = countVoteNo;
     }
+
     public VoteAssemblyDto(Boolean computedVote) {
         this.computedVote = computedVote;
     }

@@ -10,7 +10,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SessionAssemblyRepository extends CrudRepository<SessionAssembly, Long>{
+
 	Optional<SessionAssembly> findByTopicVote(TopicAssembly topicVote);
+
 	List<SessionAssembly> findByProduceMessageFalseOrProduceMessage(Boolean produceMessage);
 
 }
