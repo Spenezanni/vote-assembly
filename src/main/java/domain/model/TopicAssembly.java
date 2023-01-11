@@ -1,6 +1,7 @@
 package domain.model;
 
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Data
@@ -19,7 +20,8 @@ public class TopicAssembly {
     @OneToOne(mappedBy = "topicAssembly")
     private SessionAssembly sessionAssembly;
 
-    public TopicAssembly() {}
+    public TopicAssembly() {
+    }
 
     public TopicAssembly(String description) {
         this.description = description;

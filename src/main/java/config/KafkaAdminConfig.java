@@ -13,9 +13,11 @@ import java.util.HashMap;
 public class KafkaAdminConfig {
 
     public KafkaProperties properties;
+
     public KafkaAdminConfig(KafkaProperties properties) {
         this.properties = properties;
     }
+
     @Bean
     public KafkaAdmin KafkaAdmin() {
         var configs = new HashMap<String, Object>();

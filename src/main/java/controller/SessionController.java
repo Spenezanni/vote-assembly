@@ -14,17 +14,16 @@ import service.SessionAssemblyService;
 @RequestMapping(value = "/topics-assembly", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class SessionController {
 
-        @Autowired
-        private SessionAssemblyService sessionService;
+    @Autowired
+    private SessionAssemblyService sessionService;
 
-        @Autowired
-        private SessionAssemblyMapper sessionAssemblyMapper;
+    @Autowired
+    private SessionAssemblyMapper sessionAssemblyMapper;
 
-        @RequestMapping(value = "/v1/{topicVoteId}/open-session", method = RequestMethod.POST)
-        public ResponseEntity<SessionAssemblyResponse> openSession(@PathVariable Long topicAssemblyId, @RequestBody SessionAssemblyRequest sessionRequest) {
-               SessionAssemblyDto sessionAssemblyDto =
-                       sessionService.openSession(sessionAssemblyMapper.sessionRequestToSessionDto(topicAssemblyId, sessionRequest));
-            return ResponseEntity.ok(sessionAssemblyMapper.dtoToSessionAssemblyResponse(sessionAssemblyDto));
-        }
+    @RequestMapping(value = "/v1/{topicVoteId}/open-session", method = RequestMethod.POST)
+    public ResponseEntity<SessionAssemblyResponse> openSession(@PathVariable Long topicAssemblyId, @RequestBody SessionAssemblyRequest sessionRequest) {
+        SessionAssemblyDto sessionAssemblyDto = sessionService.openSession(sessionAssemblyMapper.sessionRequestToSessionDto(topicAssemblyId, sessionRequest));
+        return ResponseEntity.ok(sessionAssemblyMapper.dtoToSessionAssemblyResponse(sessionAssemblyDto));
+    }
 
 }

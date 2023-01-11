@@ -1,6 +1,7 @@
 package domain.dto;
 
 import lombok.Data;
+
 @Data
 public class VoteAssemblyDto {
 

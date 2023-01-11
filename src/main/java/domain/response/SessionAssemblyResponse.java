@@ -9,6 +9,7 @@ public class SessionAssemblyResponse {
 
     public SessionAssemblyResponse() {
     }
+
     public SessionAssemblyResponse(String message) {
         this.message = message;
     }

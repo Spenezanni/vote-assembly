@@ -19,6 +19,7 @@ public class VoteAssembly {
 
     public VoteAssembly() {
     }
+
     public VoteAssembly(TopicAssembly topicAssembly, String document, Boolean vote) {
         this.topicAssembly = topicAssembly;
         this.document = document;

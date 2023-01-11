@@ -6,10 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface VoteAssemblyRepository extends CrudRepository<VoteAssembly, Long>{
+public interface VoteAssemblyRepository extends CrudRepository<VoteAssembly, Long> {
 
-	Long countByTopicVoteAndVoteTrue(TopicAssembly topicVote);
+    Long countByTopicVoteAndVoteTrue(TopicAssembly topicVote);
 
-	Long countByTopicVoteAndVoteFalse(TopicAssembly topicVote);
+    Long countByTopicVoteAndVoteFalse(TopicAssembly topicVote);
 
 }
