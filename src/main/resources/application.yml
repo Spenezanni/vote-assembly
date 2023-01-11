@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  kafka:
+    produces:
+      bootstrap-servers: localhost:29092
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: '12345678'
+    tomcat:
+      validation-query: SELECT 1
+    url: jdbc:postgresql://localhost:5432/voteAssembly?useTimezone=true&serverTimezone=UTC
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+    show-sql: true
