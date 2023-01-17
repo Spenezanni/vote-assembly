@@ -1,6 +1,5 @@
 # voteAssembly
 Projeto Vote Assembly
-Projeto Vote Assembly
 
 Esse projeto consiste em cadastrar e enviar no formato JSON um tópico (pauta) que possibilita uma assembleia votar em um tema em um tempo previamente estipulado.
 Cada membro da assembleia tem direito a um voto, para isso sua identificação é validada antes da concretização do voto relacionado a um tópico.
@@ -21,16 +20,16 @@ Instanciar um tópico no Serviço do Kafka.
 
 ![image](https://user-images.githubusercontent.com/32372447/212903466-eccff87e-926d-45c7-b085-f2efdbf5f5fc.png)
 
+Outras tecnologias de desenvolvimento; 
+
 Java 11 
 
-Apache Kafka 
-
-Spring Boot 
+Spring Boot (Framework)
 
 Lombok
 
-JPA
+JPA (Java Persistence API)
 
-Postgres
+Postgres 
 
 ![image](https://user-images.githubusercontent.com/32372447/212903512-74cd89e8-02e8-4411-8349-8dd92dd979a6.png)
