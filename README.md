@@ -1,7 +1,7 @@
 # voteAssembly
 Projeto Vote Assembly
 
-Esse projeto consiste em cadastrar e enviar no formato JSON um tópico (pauta) que possibilita uma assembleia votar em um tema em um tempo previamente estipulado.
+Esse projeto consiste em cadastrar e enviar no formato JSON na Arquitetura REST, um tópico (pauta) que possibilita uma assembleia votar em um tema em um tempo previamente estipulado.
 Cada membro da assembleia tem direito a um voto, para isso sua identificação é validada antes da concretização do voto relacionado a um tópico.
 
 Tecnologias
